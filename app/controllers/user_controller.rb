@@ -1,12 +1,14 @@
-class CustomersController < AuthenticatedController
-  
+class UserController < AuthenticatedController
+  rescue_from ActiveRecord::RecordNotFound, with: :no_records_found 
+
   before_action :require_user_authentication!, only: [:create]
 
   #signup 
   def create
+    render json: user, status: :created
     user = User.create!(user_params)
     session[:user_id] = user.id
-    render json: user, status: :created
+   
 
   end
 

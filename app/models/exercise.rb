@@ -1,6 +1,6 @@
 class Exercise < ApplicationRecord
 
-    validates :exercise_items, presence: true
+    validates :exercise , presence: true
 
     belongs_to :user
     has_many :exercise, through: workout
