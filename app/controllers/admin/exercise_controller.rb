@@ -1,6 +1,8 @@
+
 class Admin::ExerciseController < AdminAuthenticatedController
-    
     def index
-        render json: Exercise.all, status: :ok
-    end 
-end
+      exercises = Exercise.all
+      render json: exercises, status: :ok
+    end
+  end
+  
