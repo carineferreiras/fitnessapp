@@ -40,9 +40,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_08_084245) do
     t.integer "user_id"
   end
 
+  create_table "exercise_id", force: :cascade do |t|
+    t.integer "exercise_id"
+    t.decimal "duration"
+    t.integer "product_variant_id"
+    t.integer "quantity", default: 6
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-
-  
+  create_table "workout_variant", force: :cascade do |t|
+    t.integer "workout_id"
+    t.string "duration"
+    t.string "muscle_group_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
  
   # create_table "users", force: :cascade do |t|
   #   t.string "email", default: "", null: false

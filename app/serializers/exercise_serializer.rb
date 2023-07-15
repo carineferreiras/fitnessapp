@@ -1,6 +1,8 @@
 class ExerciseSerializer < ActiveModel::Serializer
   
-  attributes :exercise_id, :exercise_items
+  attributes :id, :duration, :user, :muscle_group_name
+
+  has_many: exercise_id
 
   def exercise_id 
     self.object.id

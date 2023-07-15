@@ -11,6 +11,11 @@ User.delete_all
 User.reset_pk_sequence 
 
 
+Exercise_id.delete_all
+Exercise_id.reset_pk_sequence
+
+WorkoutVariant.delete_all
+WorkoutVariant.reset_pk_sequence
 
 
 AdminUser.create!(username: 'carineferreiras', password: '123654789Caca', password_confirmation: '123654789Caca')

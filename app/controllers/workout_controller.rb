@@ -14,4 +14,9 @@ else
     render json: { error: "Not Found" }
     
 end
+def destroy
+    workout = Workout.find(params[:id])
+    workout.delete 
+    head :no_content
+end 
 end

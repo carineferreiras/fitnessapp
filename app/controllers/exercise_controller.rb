@@ -30,7 +30,7 @@ class ExercisesController < AuthenticatedController
 
     def index 
        exercise = Exercise.find_by!(user_id: session[:user_id])
-        render json: Exercise.all, status: :ok
+        render json: exercise, status: :ok
     end 
 
    #private methods

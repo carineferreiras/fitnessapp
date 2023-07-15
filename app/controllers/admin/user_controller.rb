@@ -2,7 +2,8 @@ class Admin::UserController < AdminAuthenticatedController
 
     #view all customers
     def index 
-        render json: User.all, status: :ok
+        user= User.all.size
+        render json:  {"Total number of user": user }, status: :ok
     end 
 
     

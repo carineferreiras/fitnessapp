@@ -21,7 +21,7 @@ class Admin::WorkoutController < AdminAuthenticatedController
     #update a workout
     def update 
        workout = get_workout_by_id
-        workout.update!(pworkout_params)
+        workout.update!(workout_params)
 
         render json: workout, status: :accepted
     end 

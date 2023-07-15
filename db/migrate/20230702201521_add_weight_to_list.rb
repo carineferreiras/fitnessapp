@@ -1,5 +1,12 @@
-class AddWeightToList < ActiveRecord::Migration[7.0]
+class CreateWorkoutVariants < ActiveRecord::Migration[7.0]
   def change
-    add_column :exercises, :weight, :integer
+    create_table :workout_variants do |t|
+      t.integer :workout_id
+      t.string :duration
+      t.decimal :muscle_group_name
+
+      t.timestamps
+    end
   end
 end
+
