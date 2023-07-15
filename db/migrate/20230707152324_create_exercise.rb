@@ -1,7 +1,7 @@
-class CreateOrderItems < ActiveRecord::Migration[7.0]
+class CreateExerciseId < ActiveRecord::Migration[7.0]
   def change
-    create_table :order_items do |t|
-      t.integer :order_id
+    create_table :exercise_id do |t|
+      t.integer :exercise_id
       t.integer :workout_variant_id
 
       t.timestamps
