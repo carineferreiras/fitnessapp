@@ -5,7 +5,10 @@ class CreateExercises < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :repetitions
       t.integer :sets
+      t.integer :user_id
+      t.integer :weight
       t.references :workout, foreign_key: true
+    
 
       t.timestamps
     end

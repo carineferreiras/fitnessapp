@@ -5,6 +5,8 @@ class CreateExerciseId < ActiveRecord::Migration[7.0]
       t.references :workout_variant, null: false, foreign_key: true
       t.decimal :duration
       t.integer :quantity, default: 6
+      # t.integer :exercise_id
+   
 
       t.timestamps
     end

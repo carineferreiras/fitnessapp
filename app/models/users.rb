@@ -11,7 +11,8 @@ class User < ApplicationRecord
   
     # Run these two validations. Allow blank on updates
     validates :password, length: { in: 8..30 }, allow_blank: true, on: :update
-    validates_strength_of :password, level: :strong, with: :email_address, allow_blank: true, on: :update
+    validates_strength_of :password, level: :strong, with: :email_address
+
   
     has_many :exercises, through: :workout
     private
