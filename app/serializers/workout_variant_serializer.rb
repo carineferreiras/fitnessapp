@@ -1,4 +1,4 @@
-class WorkoutVariantSerializer < ActiveModel::Serializer
+class WorkoutVariantsSerializer < ActiveModel::Serializer
 
     attributes :title, :description
   
