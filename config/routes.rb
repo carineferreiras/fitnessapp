@@ -20,11 +20,11 @@ Rails.application.routes.draw do
 
     resources :workouts, only: [:create, :index, :show, :update, :destroy]
     resources :users, only: [:show, :index]
-    resources :exercises, only: [:index]
+  
 
-    # resources :products, only: [:create, :index, :show, :update, :destroy]
+    resources :exercises, only: [:create, :index, :show, :update, :destroy]
   end
 
-  # resources :products, only: [:index, :show]
+  resources :workout, only: [:index, :show]
 
 end
