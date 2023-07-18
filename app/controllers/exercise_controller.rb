@@ -53,6 +53,11 @@ class ExercisesController < AuthenticatedController
       exercises = Exercise.where(user_id: session[:user_id])
       render json: exercises, status: :ok
     end
+
+    # def index
+    #     exercises = Workout.find(params [workout_id: session[:user_id]).exercise
+    #     render json: exercises, status: :ok
+    #   end
   
     private
   
