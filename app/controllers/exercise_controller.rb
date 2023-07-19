@@ -67,7 +67,7 @@ class ExerciseController < AuthenticatedController
 end
 
 def show
-   exercise = Exercise.find_by(id: params[:id])
+   exercise = Exercise.find(exercise_params[:id])
 
     if exercise
       render json: exercise, status: :ok

@@ -38,9 +38,9 @@ def create
     workout = Workout.create!(workout_params)
     render json: workout, status: :created
   end
-  
+
     def show
-      workout = Workout.find_by(id: params[:id])
+      workout = Workout.find(workout_params[:id])
   
       if workout
         render json: workout, status: :ok
@@ -50,7 +50,7 @@ def create
     end
   
     def destroy
-      workout = Workout.find_by(id: params[:id])
+      workout = Workout.find(workout_params[:id])
   
       if workout
         workout.destroy
