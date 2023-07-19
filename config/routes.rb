@@ -10,19 +10,19 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :exercises, only: [:create, :index]
-  resources :workouts, only: [:index, :show]
+  resources :exercise, only: [:create, :index]
+  resources :workout, only: [:index, :show]
 
   # Admin
   namespace :admin do
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'
 
-    resources :workouts, only: [:create, :index, :show, :update, :destroy]
-    resources :users, only: [:show, :index]
+    resources :workout, only: [:create, :index, :show, :update, :destroy]
+    resources :user, only: [:show, :index]
   
 
-    resources :exercises, only: [:create, :index, :show, :update, :destroy]
+    resources :exercise, only: [:create, :index, :show, :update, :destroy]
   end
 
   resources :workout, only: [:index, :show]
