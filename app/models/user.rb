@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates_strength_of :password, level: :strong, with: :email_address
 
   
-    has_many :exercises, through: :workout
+    has_many :exercise, through: :workout
     private
 
     def password_strength

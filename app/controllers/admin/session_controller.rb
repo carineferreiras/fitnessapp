@@ -24,7 +24,7 @@
 # end
 
 
-class Admin::SessionsController < AdminAuthenticatedController
+class Admin::SessionController < AdminAuthenticatedController
     skip_before_action :require_user_authentication!, only: [:create]
   
     # Login

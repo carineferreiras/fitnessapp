@@ -23,7 +23,7 @@
 # end
 
 
-class SessionsController < AuthenticatedController
+class SessionController < AuthenticatedController
     skip_before_action :require_user_authentication!, only: [:create]
   
     # Login

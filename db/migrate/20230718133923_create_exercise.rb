@@ -1,14 +1,12 @@
-class CreateExercises < ActiveRecord::Migration[7.0]
+class CreateExercise < ActiveRecord::Migration[7.0]
   def change
     create_table :exercises do |t|
-      t.references :user, foreign_key: true
-      t.string :name
+      t.string :name 
+      t.integer :duration
       t.integer :repetitions
       t.integer :sets
       t.integer :user_id
       t.integer :weight
-      t.references :workout, foreign_key: true
-    
 
       t.timestamps
     end

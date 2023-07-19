@@ -59,8 +59,8 @@ class Admin::WorkoutController < AdminAuthenticatedController
   
     # View all workouts
     def index
-      workouts = Workout.all
-      render json: workouts, status: :ok
+      workout = Workout.all
+      render json: workout, status: :ok
     end
   
     # View a certain workout

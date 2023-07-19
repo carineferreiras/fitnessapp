@@ -1,4 +1,4 @@
-class CreateAdminUsers < ActiveRecord::Migration[7.0]
+class CreateAdminUser < ActiveRecord::Migration[7.0]
   def change
     create_table :admin_users do |t|
       t.string :username

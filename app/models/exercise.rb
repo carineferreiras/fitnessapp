@@ -1,9 +1,9 @@
 class Exercise < ApplicationRecord
     validates :exercise, presence: true
   
-    # belongs_to :user
-    belongs_to:workouts
+    belongs_to :user
+    belongs_to:workout
   
-    accepts_nested_attributes_for :workouts
+    accepts_nested_attributes_for :workout
   end
   

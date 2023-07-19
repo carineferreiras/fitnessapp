@@ -19,7 +19,7 @@
 # end 
 
 # end
-class Admin::AdminUsersController < ApplicationController
+class Admin::AdminUserController < ApplicationController
     # Signup
     def create
       admin_user = AdminUser.create(admin_user_params)

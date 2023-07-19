@@ -1,4 +1,4 @@
-class ExerciseSerializer < ActiveModel::Serializer
+class ExercisesSerializer < ActiveModel::Serializer
   
   attributes :id, :duration, :user, :muscle_group_name
 

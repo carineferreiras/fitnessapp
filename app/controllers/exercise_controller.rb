@@ -43,15 +43,15 @@
 # end
 
 
-class ExercisesController < AuthenticatedController
+class ExerciseController < AuthenticatedController
     def create
       exercise = Exercise.create!(user_id: session[:user_id], **exercise_params)
       render json: exercise, status: :created
     end
   
     def index
-      exercises = Exercise.where(user_id: session[:user_id])
-      render json: exercises, status: :ok
+      exercise = Exercise.where(user_id: session[:user_id])
+      render json: exercise, status: :ok
     end
 
     # def index
