@@ -23,9 +23,21 @@
 
 class WorkoutController < ApplicationController
     def index
-      workout = Workout.all
-      render json: workout, status: :ok
+        workout =[]
+        if params [:exercise_id]
+            workout= Exercise.find(params:[:exercise_id]).workout
+        else
+            workout=Workout.all
+    #   workout = Workout.all
+    #   render json: workout, status: :ok
     end
+    render json: workout, status: :ok
+end
+
+def create
+    workout = Workout.create!(workout_params)
+    render json: workout, status: :created
+  end
   
     def show
       workout = Workout.find_by(id: params[:id])

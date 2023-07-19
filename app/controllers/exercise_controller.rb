@@ -49,15 +49,33 @@ class ExerciseController < AuthenticatedController
       render json: exercise, status: :created
     end
   
-    def index
-      exercise = Exercise.where(user_id: session[:user_id])
-      render json: exercise, status: :ok
-    end
-
     # def index
-    #     exercises = Workout.find(params [workout_id: session[:user_id]).exercise
-    #     render json: exercises, status: :ok
-    #   end
+    #   exercise = Exercise.where(user_id: session[:user_id])
+    #   render json: exercise, status: :ok
+    # end
+
+    def index
+        exercise =[]
+        if params [:workout_id]
+            exercise = Workout.find(params:[:workout_id]).exercise
+        else
+            exercise=Exercise.all
+    #   workout = Workout.all
+    #   render json: workout, status: :ok
+    end
+    render json: exercise, status: :ok
+end
+
+def show
+   exercise = Exercise.find_by(id: params[:id])
+
+    if exercise
+      render json: exercise, status: :ok
+    else
+      render json: { error: "Not Found" }, status: :not_found
+    end
+  end
+    
   
     private
   
