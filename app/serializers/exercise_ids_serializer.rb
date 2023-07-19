@@ -1,6 +1,7 @@
 class ExerciseIdsSerializer < ActiveModel::Serializer
 
-    attributes :id, :duration, :exercise, :muscle_group_name
+    attributes :id
+    # attributes :id, :duration, :user, :muscle_group_name,  :repetitions, :sets , :weight
 
     has_many :workout_variants
 

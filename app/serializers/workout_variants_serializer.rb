@@ -7,3 +7,4 @@ class WorkoutVariantsSerializer < ActiveModel::Serializer
     end 
   
   end
+

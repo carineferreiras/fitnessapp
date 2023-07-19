@@ -1,6 +1,6 @@
 class ExerciseSerializer < ActiveModel::Serializer
   
-  attributes :id, :duration, :user, :muscle_group_name
+  attributes :id, :duration, :user, :muscle_group_name,  :repetitions, :sets , :weight
 
   has_many: exercise
 
@@ -16,3 +16,4 @@ class ExerciseSerializer < ActiveModel::Serializer
 
 
 end
+

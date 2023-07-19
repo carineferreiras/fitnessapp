@@ -1,136 +1,135 @@
-# puts "🌱 SEEDING DATA....."
+puts "🌱 SEEDING DATA....."
 
-# Workout.delete_all
-# Workout.reset_pk_sequence
+Workout.delete_all
+Workout.reset_pk_sequence
 
-# AdminUser.delete_all
-# AdminUser.reset_pk_sequence
+AdminUser.delete_all
+AdminUser.reset_pk_sequence
 
-# User.delete_all
-# User.reset_pk_sequence
+User.delete_all
+User.reset_pk_sequence
 
-# Exercise.delete_all
-# Exercise.reset_pk_sequence
+Exercise.delete_all
+Exercise.reset_pk_sequence
 
-# WorkoutVariant.delete_all
-# WorkoutVariant.reset_pk_sequence
+WorkoutVariant.delete_all
+WorkoutVariant.reset_pk_sequence
 
-# AdminUser.create!(username: 'carineferreiras', password: '123654789Caca', password_confirmation: '123654789Caca')
+AdminUser.create!(username: 'carineferreiras', password: '123654789Caca', password_confirmation: '123654789Caca')
 
-# user1 = User.create!(
-#   firstname: 'Amy',
-#   lastname: 'Robson',
-#   phone_number: '04567990022',
-#   email_address: 'amyrobson2@gmail.com',
-#   password: 'password123',
-#   password_confirmation: 'password123'
-# )
+user1 = User.create!(
+  firstname: 'Amy',
+  lastname: 'Robson',
+  phone_number: '04567990022',
+  email_address: 'amyrobson2@gmail.com',
+  password: 'password123',
+  password_confirmation: 'password123'
+)
 
-# user2 = User.create!(
-#   firstname: 'Peter',
-#   lastname: 'Hogan',
-#   phone_number: '0423764789',
-#   email_address: 'peterhogan@gmail.com',
-#   password: 'password123',
-#   password_confirmation: 'password123'
-# )
+user2 = User.create!(
+  firstname: 'Peter',
+  lastname: 'Hogan',
+  phone_number: '0423764789',
+  email_address: 'peterhogan@gmail.com',
+  password: 'password123',
+  password_confirmation: 'password123'
+)
 
-# user3 = User.create!(
-#   firstname: 'Anna',
-#   lastname: 'Mary',
-#   phone_number: '0432234567',
-#   email_address: 'annamarry@gmail.com',
-#   password: 'password123',
-#   password_confirmation: 'password123'
-# )
+user3 = User.create!(
+  firstname: 'Anna',
+  lastname: 'Mary',
+  phone_number: '0432234567',
+  email_address: 'annamarry@gmail.com',
+  password: 'password123',
+  password_confirmation: 'password123'
+)
 
-# # --------------WORKOUT-----------------------------------
-# workout1 = Workout.create!(
-#   title: "Back Workout",
-#   description: "Work out your back",
-#   user: user1
-# )
-# workout1.workout_variants.create!(duration: 'short', is_default: true, muscle_group_name: 'back')
+# --------------WORKOUT-----------------------------------
 
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Lat Pulldown",
-#   repetitions: 10,
-#   sets: 3,
-#   weight: 50
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Deadlift",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 100
-# )
+workout1 = Workout.create!(
+  workout_id:1
+  title: "Back Workout",
+  description: "Work out your back",
+  user_id: 1
+  muscle_group_name: "back"
+)
+workout1.workout_variants.create!(duration: 'short', is_default: true, muscle_group_name: 'back')
 
-# workout1 = Workout.create!(
-#   title: "Back Workout",
-#   description: "Work out your back",
-#   user: user1
-# )
-# workout1.workout_variants.create!(duration: 'medium', is_default: true, muscle_group_name: 'back')
+workout1.exercises.create!(
+  name: "Lat Pulldown",
+  repetitions: 10,
+  sets: 3,
+  weight: 50
+) 
 
-# workout1.exercises.create!(
-#   id: user1,
-#   name: "Lat Pulldown",
-#   repetitions: 10,
-#   sets: 3,
-#   weight: 50
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Deadlift",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 100
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Push-Ups",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 0
-# )
+workout1.exercises.create!(
+  name: "Deadlift",
+  repetitions: 8,
+  sets: 4,
+  weight: 100
+)
 
-# workout1 = Workout.create!(
-#   title: "Back Workout",
-#   description: "Work out your back",
-#   user: user1
-# )
-# workout1.workout_variants.create!(duration: 'long', is_default: true, muscle_group_name: 'back')
+workout2 = Workout.create!(
+  workout_id: 2
+  title: "Back Workout",
+  description: "Work out your back",
+  user_id: 2
+  muscle_group_name: "back"
+)
+workout2.workout_variants.create!(duration: 'medium', is_default: true, muscle_group_name: 'back')
 
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Lat Pulldown",
-#   repetitions: 10,
-#   sets: 3,
-#   weight: 50
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Deadlift",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 100
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Push-Ups",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 0
-# )
-# workout1.exercises.create!(
-#   user: user1,
-#   name: "Bent-Over-Row",
-#   repetitions: 8,
-#   sets: 4,
-#   weight: 20
-# )
+workout2.exercises.create!(
+  name: "Lat Pulldown",
+  repetitions: 10,
+  sets: 3,
+  weight: 50
+)
+workout2.exercises.create!(
+  name: "Deadlift",
+  repetitions: 8,
+  sets: 4,
+  weight: 100
+)
+workout2.exercises.create!(
+  name: "Push-Ups",
+  repetitions: 8,
+  sets: 4,
+  weight: 0
+)
+
+workout3 = Workout.create!(
+  workout_id:3
+  title: "Back Workout",
+  description: "Work out your back",
+  user_id: 3
+  muscle_group_name: "back"
+)
+workout3.workout_variants.create!(duration: 'long', is_default: true, muscle_group_name: 'back')
+
+workout3.exercises.create!(
+  name: "Lat Pulldown",
+  repetitions: 10,
+  sets: 3,
+  weight: 50
+)
+workout3.exercises.create!(
+  name: "Deadlift",
+  repetitions: 8,
+  sets: 4,
+  weight: 100
+)
+workout3.exercises.create!(
+  name: "Push-Ups",
+  repetitions: 8,
+  sets: 4,
+  weight: 0
+)
+workout3.exercises.create!(
+  name: "Bent-Over-Row",
+  repetitions: 8,
+  sets: 4,
+  weight: 20
+)
 
 # workout2 = Workout.create!(
 #   title: "Chest Workout",
@@ -683,4 +682,4 @@
 #   weight: 0
 # )
 
-# puts "🌱 FINISHED SEEDING!!!!"
+puts "🌱 FINISHED SEEDING!!!!"
